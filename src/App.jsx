@@ -20,7 +20,7 @@ const prepearedCategory = preparePosts(
 
 export const App = () => {
   const [query, setQuery] = useState('');
-  const [mainCategory, setMainCategory] = useState(prepearedCategory);
+  // const [mainCategory, setMainCategory] = useState(prepearedCategory);
 
   const searchParam = prepearedCategory.filter((category) => {
     const searchParamLowerCase = query.toLocaleLowerCase();
@@ -35,12 +35,11 @@ export const App = () => {
     return undefined;
   });
 
-  const handleReset = () => {
-    const copy = [...prepearedCategory]
+  // const handleReset = () => {
+  //   const copy = [...prepearedCategory];
 
-    setMainCategory(copy);
-  };
-
+  //   setMainCategory(copy);
+  // };
 
   return (
     <div className="section">
@@ -116,7 +115,6 @@ export const App = () => {
                     className="button mr-2 my-1 is-info"
                     href="#/"
                     key={category.id}
-                    onClick={() => {setCategoryName(category.title)}}
                   >
                     {category.title}
                   </a>
